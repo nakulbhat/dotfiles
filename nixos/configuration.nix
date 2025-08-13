@@ -113,6 +113,7 @@
     waybar
     hyprpaper
     jq
+    polkit
     pamixer
     brightnessctl
     bat
