@@ -110,6 +110,8 @@
     kitty
     dunst
     wofi
+    networkmanagerapplet
+    mako
     waybar
     hyprpaper
     jq
