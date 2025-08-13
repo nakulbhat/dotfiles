@@ -113,6 +113,9 @@
     waybar
     hyprpaper
     jq
+    pamixer
+    brightnessctl
+    bat
   ];
 
 
