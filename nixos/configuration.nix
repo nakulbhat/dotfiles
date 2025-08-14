@@ -20,7 +20,6 @@
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
   # Enable networking
   networking.networkmanager.enable = true;
 
@@ -106,7 +105,6 @@
     vscodium
     git
     pinentry-curses
-    font-awesome
     gnupg
     kitty
     dunst
@@ -119,6 +117,8 @@
     polkit
     pamixer
     brightnessctl
+  nerd-fonts.jetbrains-mono
+    font-awesome
     bat
   ];
 
@@ -127,7 +127,7 @@ programs.gnupg.agent = {
   enable = true;
   pinentryPackage = pkgs.pinentry-curses;
 };
-  # Some programs need SUID wrappers, can be configured further or are
+ # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
   # programs.gnupg.agent = {
