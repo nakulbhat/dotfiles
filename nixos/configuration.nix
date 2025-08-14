@@ -106,6 +106,7 @@
     vscodium
     git
     pinentry-curses
+    font-awesome
     gnupg
     kitty
     dunst
