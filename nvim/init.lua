@@ -22,5 +22,4 @@ vim.opt.clipboard = 'unnamedplus' -- Use the system clipboard for all operations
 
 -- Mappings
 -- jk for escape
-vim.api.nvim_set_keymap('n', 'jk', '<Esc>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('i', 'jk', '<Esc>', { noremap = true, silent = true })

@@ -116,6 +116,7 @@
     jq
     polkit
     pamixer
+    nwg-bar
     brightnessctl
   nerd-fonts.jetbrains-mono
     font-awesome
