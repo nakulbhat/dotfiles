@@ -8,13 +8,17 @@
     };
 
     environment.systemPackages = with pkgs; [
-        tofi
+        mako
+            tofi
             waybar
             hyprpaper
             pamixer
             brightnessctl
             kitty
+            libnotify
     ];
+
+    services.dbus.enable = true;
 
     programs.hyprland = {
         enable = true;
