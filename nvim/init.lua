@@ -9,8 +9,8 @@ vim.opt.syntax = 'on'             -- Enable syntax highlighting
 vim.opt.termguicolors = true      -- Enable true colors in the terminal
 
 -- Indentation
-vim.opt.tabstop = 2               -- Number of spaces a tab counts for
-vim.opt.shiftwidth = 2            -- Number of spaces for indent
+vim.opt.tabstop = 4               -- Number of spaces a tab counts for
+vim.opt.shiftwidth = 4            -- Number of spaces for indent
 vim.opt.expandtab = true          -- Use spaces instead of tabs
 
 -- Search settings
