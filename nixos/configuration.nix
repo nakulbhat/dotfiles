@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
     ./hardware-configuration.nix
+    ./hyprland.nix
     ];
 
 # Bootloader.
@@ -16,11 +17,6 @@
 
   networking.hostName = "nixos"; # Define your hostname.
 # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-    services.displayManager.ly.enable = true;
-  services.displayManager.ly.settings = {
-    bigclock = "true";
-    animation = "matrix";
-  };
 # Configure network proxy if necessary
 # networking.proxy.default = "http://user:password@proxy:port/";
 # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
@@ -30,20 +26,7 @@
 # Set your time zone.
   time.timeZone = "Asia/Kolkata";
 
-# Select internationalisation properties.
-  i18n.defaultLocale = "en_IN";
 
-  i18n.extraLocaleSettings = {
-    LC_ADDRESS = "en_IN";
-    LC_IDENTIFICATION = "en_IN";
-    LC_MEASUREMENT = "en_IN";
-    LC_MONETARY = "en_IN";
-    LC_NAME = "en_IN";
-    LC_NUMERIC = "en_IN";
-    LC_PAPER = "en_IN";
-    LC_TELEPHONE = "en_IN";
-    LC_TIME = "en_IN";
-  };
 
 # Enable the X11 windowing system.
 # You can disable this if you're only using the Wayland session.
@@ -105,23 +88,12 @@
       neovim 
       curl
       wget
-      wlr-randr
       vscodium
       git
       pinentry-curses
       gnupg
-      kitty
-      dunst
-      wofi
-      tofi
-      networkmanagerapplet
-      mako
-      waybar
-      hyprpaper
       jq
       polkit
-      pamixer
-      brightnessctl
       nerd-fonts.jetbrains-mono
       font-awesome
       bat
@@ -151,19 +123,6 @@
 # Or disable the firewall altogether.
 # networking.firewall.enable = false;
 
-  programs.hyprland = {
-    enable = true;
-    xwayland.enable = true;
-  };
-  environment.sessionVariables = {
-    WLR_NO_HARDWARE_CURSORS = "1";
-    NIXOS_OZONE_WL = "1";
-  };
-
-  hardware = {
-    opengl.enable = true;
-    nvidia.modesetting.enable = true;
-  };
 
 # This value determines the NixOS release from which the default
 # settings for stateful data, like file locations and database versions
