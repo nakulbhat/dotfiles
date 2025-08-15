@@ -113,6 +113,7 @@
       kitty
       dunst
       wofi
+      tofi
       networkmanagerapplet
       mako
       waybar
@@ -120,8 +121,6 @@
       jq
       polkit
       pamixer
-      python313
-      nwg-bar
       brightnessctl
       nerd-fonts.jetbrains-mono
       font-awesome
