@@ -16,7 +16,9 @@
 
 #workspaces button{
     color: @foreground;
-    padding-left: 0.8em;
+    padding-left: 0.4em;
+    padding-right: 0.4em;
+    margin-left: 0.4em;
 }
 
 
