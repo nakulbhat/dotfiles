@@ -97,6 +97,8 @@ services.desktopManager.plasma6.enable = true;
       nerd-fonts.jetbrains-mono
       font-awesome
       bat
+      gnumake
+      vlc
       ];
 
 
@@ -104,6 +106,8 @@ services.desktopManager.plasma6.enable = true;
     enable = true;
     pinentryPackage = pkgs.pinentry-curses;
   };
+
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 # Some programs need SUID wrappers, can be configured further or are
 # started in user sessions.
 # programs.mtr.enable = true;
