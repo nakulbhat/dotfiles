@@ -99,9 +99,24 @@ services.desktopManager.plasma6.enable = true;
       bat
       gnumake
       vlc
+      youtube-music
       ];
 
-
+    programs = {
+      zsh = {
+        enable = true;
+        ohMyZsh = {
+          enable = true;
+          theme = "agnoster";
+          plugins = [
+            "sudo"
+            "terraform"
+            "systemadmin"
+            "vi-mode"
+          ];
+        };
+      };
+    };
   programs.gnupg.agent = {
     enable = true;
     pinentryPackage = pkgs.pinentry-curses;
