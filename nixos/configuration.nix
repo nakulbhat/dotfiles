@@ -107,16 +107,15 @@ services.desktopManager.plasma6.enable = true;
         enable = true;
         ohMyZsh = {
           enable = true;
-          theme = "agnoster";
-          plugins = [
-            "sudo"
-            "terraform"
-            "systemadmin"
-            "vi-mode"
-          ];
+          theme = "candy";
         };
       };
     };
+    programs.zsh.syntaxHighlighting.enable = true;
+    programs.zsh.autosuggestions.enable = true;
+    users.defaultUserShell = pkgs.zsh;
+
+
   programs.gnupg.agent = {
     enable = true;
     pinentryPackage = pkgs.pinentry-curses;
