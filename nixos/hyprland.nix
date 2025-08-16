@@ -16,6 +16,8 @@
             brightnessctl
             kitty
             libnotify
+            grim 
+            slurp
     ];
 
     services.dbus.enable = true;
