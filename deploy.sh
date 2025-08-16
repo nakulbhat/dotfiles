@@ -44,3 +44,4 @@ sudo ln -s "$DOTFILES_DIR/nixos" "$NIXOS_DEST"
 echo "Deployment complete!"
 
 
+# add stuff for other apps, add chmods for hypr scripts 
