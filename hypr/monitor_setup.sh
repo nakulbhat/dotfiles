@@ -5,7 +5,7 @@ MONITOR_COUNT=$(hyprctl monitors -j | jq 'length')
 
 # Check if the monitor count is exactly 2
 if [ "$MONITOR_COUNT" -eq 2 ]; then
-    echo "Two monitors detected. Proceeding with configuration..."
+    notify-send "Two monitors detected. Proceeding with configuration..." -t 2500
     
     # 1. Turn off the external monitor ("HDMI-A-1")
     hyprctl keyword monitor "HDMI-A-1, disable"
@@ -20,5 +20,5 @@ if [ "$MONITOR_COUNT" -eq 2 ]; then
     hyprctl keyword monitor "eDP-1, 1920x1080@60, 1366x0, 1"
 
 else
-    echo "Either more or less than two monitors are attached. Exiting script."
+    notify-send "Either more or less than two monitors are attached. Exiting script." -t 2500
 fi
