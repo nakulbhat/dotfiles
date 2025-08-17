@@ -5,7 +5,7 @@
 * {
     font-family: JetBrainsMono Nerd Font;
     font-size: 17px;
-    padding: 0;
+    padding: 0px;
     margin: 0;
 }
 
@@ -26,17 +26,23 @@
     color: @foreground-inactive; /* A darker color for inactive numbers */
 }
 
-#memory,
-#custom-platform-profile {
-    padding-left: 1em
-}
-
 #wireplumber,
 #battery,
 #idle_inhibitor,
 #language,
 #network,
-#bluetooth,
-#tray {
-    padding-right: 1em 
+#bluetooth
+#custom-separator,
+#custom-kdeconnect
+{
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+}
+
+#idle_inhibitor,
+#network,
+#custom-kdeconnect
+{
+    margin-left: 0.5em;
+    margin-right: 0.5em;
 }
