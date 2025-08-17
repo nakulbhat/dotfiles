@@ -1,71 +1,95 @@
 {
-  "layer": "top",
+    "layer": "top",
     "position": "top",
     "height": 24,
     "spacing": 5,
-
-    "modules-left": ["hyprland/workspaces",], 
-    "modules-center": ["clock"],
-    "modules-right": ["backlight", "wireplumber", "battery",  "idle_inhibitor", "network",  ],
+    "modules-left": [
+        "hyprland/workspaces"
+    ],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-right": [
+        "backlight",
+        "custom/separator",
+        "wireplumber",
+        "custom/separator",
+        "battery",
+        "custom/separator",
+        "custom/kdeconnect",
+        "idle_inhibitor",
+        "network"
+    ],
     "backlight": {
-      "format": " {icon} {percent}% |",
-      "format-icons": ["", ""]
+        "format": "{icon}  {percent}% ",
+        "format-icons": [
+            "",
+            ""
+        ]
     },
-
     "hyprland/workspaces": {
-      "format": " {name} ",
-      "on-click": "activate",
-      "format-icons": {
-        "active": "\uf444",
-        "default": "\uf4c3"
-      },
-      "icon-size": 10,
-      "sort-by-number": true
+        "format": "{name}",
+        "on-click": "activate",
+        "icon-size": 10,
+        "sort-by-number": true
     },
-
     "clock": {
-      "format": "{:%d %b %Y | %H:%M}"
+        "format": "{:%d %b %Y | %H:%M}"
     },
-
     "wireplumber": {
-      "format": " \udb81\udd7e {volume}% |",
-      "max-volume": 100,
-      "scroll-step": 5
+        "format": "\udb81\udd7e {volume}%",
+        "format-muted": "\udb81\udd81 {volume}%",
+        "max-volume": 100,
+        "scroll-step": 1
     },
-
     "battery": {
-      "bat": "BAT1",
-      "interval": 60,
-      "format": "{icon}  {capacity}% |",
-      "format-icons": ["\uf244", "\uf243", "\uf242", "\uf241", "\uf240"],
+        "bat": "BAT1",
+        "interval": 60,
+        "format": "{icon}  {capacity}%",
+        "format-charging": "{icon}  {capacity}% +",
+        "format-icons": [
+            "\uf244",
+            "\uf243",
+            "\uf242",
+            "\uf241",
+            "\uf240"
+        ]
     },
-
-    "memory": {
-      "interval": 30,
-      "format": "\uf4bc  {used:0.1f}G"
-    },
-
-    "temperature": {
-      "format": "{temperatureC}°C"
-    },
-
     "network": {
-      "format": "",
-      "format-ethernet": "\udb83\udc9d",
-      "format-wifi": "{icon}",
-      "format-disconnected": "\udb83\udc9c",
-      "format-icons": ["\udb82\udd2f", "\udb82\udd1f", "\udb82\udd22", "\udb82\udd25", "\udb82\udd28"],
-      "tooltip-format-wifi": "{essid} ({signalStrength}%)",
-      "tooltip-format-ethernet": "{ifname}",
-      "tooltip-format-disconnected": "Disconnected",
+        "format": "",
+        "format-ethernet": "\udb83\udc9d",
+        "format-wifi": "{icon}",
+        "format-disconnected": "\udb83\udc9c",
+        "format-icons": [
+            "\udb82\udd2f",
+            "\udb82\udd1f",
+            "\udb82\udd22",
+            "\udb82\udd25",
+            "\udb82\udd28"
+        ],
+        "tooltip-format-wifi": "{essid} ({signalStrength}%)",
+        "tooltip-format-ethernet": "{ifname}",
+        "tooltip-format-disconnected": "Disconnected",
+        "on-click": "hyprctl keyword exec kitty nmtui"
     },
-
-
     "idle_inhibitor": {
-      "format": "{icon}",
-      "format-icons": {
-        "activated": "\udb80\udd76",
-        "deactivated": "\udb83\udfaa"
-      }
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "\udb80\udd76",
+            "deactivated": "\udb83\udfaa"
+        }
+    },
+    "custom/kdeconnect": {
+        "exec": "~/.config/waybar/script.sh",
+        "return-type": "json",
+        "format": "{text}",
+        "interval": 5,
+        "tooltip": true,
+        "on-click": "hyprctl keyword exec kdeconnect-app"
+    },
+    "custom/separator": {
+        "format": "|",
+        "interval": "once",
+        "tooltip": false
     }
 }
