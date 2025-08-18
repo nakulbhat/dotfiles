@@ -12,3 +12,5 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 EDITOR=nvim
+
+bindkey '^ ' autosuggest-execute
