@@ -11,4 +11,4 @@ zstyle :compinstall filename '/home/nakul/.zshrc'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
-ZSH_THEME="robbyrussell"
+EDITOR=nvim
