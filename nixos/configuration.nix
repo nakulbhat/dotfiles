@@ -8,7 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
     ./hardware-configuration.nix
-    ./hyprland.nix
+      ./hyprland.nix
     ];
 
 # Bootloader.
@@ -21,7 +21,7 @@
 # networking.proxy.default = "http://user:password@proxy:port/";
 # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 # Enable networking
-  networking.networkmanager.enable = true;
+    networking.networkmanager.enable = true;
 
 # Set your time zone.
   time.timeZone = "Asia/Kolkata";
@@ -30,12 +30,12 @@
 
 # Enable the X11 windowing system.
 # You can disable this if you're only using the Wayland session.
-  #services.xserver.enable = true;
+#services.xserver.enable = true;
 
 # Enable the KDE Plasma Desktop Environment.
 # services.displayManager.sddm.enable = true;
-services.desktopManager.plasma6.enable = true;
-programs.kdeconnect.enable = true;
+  services.desktopManager.plasma6.enable = true;
+  programs.kdeconnect.enable = true;
 
 # Configure keymap in X11
 #  services.xserver.xkb = {
@@ -63,7 +63,7 @@ programs.kdeconnect.enable = true;
   };
 
 # Enable touchpad support (enabled default in most desktopManager).
-  # services.xserver.libinput.enable = true;
+# services.xserver.libinput.enable = true;
 
 # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.nakul = {
@@ -81,7 +81,6 @@ programs.kdeconnect.enable = true;
 
 # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
-
 # List packages installed in system profile. To search, run:
 # $ nix search wget
   environment.systemPackages = with pkgs; [
@@ -101,20 +100,21 @@ programs.kdeconnect.enable = true;
       gnumake
       vlc
       youtube-music
-      ];
+     texlive.combined.scheme-full
+  ];
 
-    programs = {
-      zsh = {
+  programs = {
+    zsh = {
+      enable = true;
+      ohMyZsh = {
         enable = true;
-        ohMyZsh = {
-          enable = true;
-          theme = "candy";
-        };
+        theme = "candy";
       };
     };
-    programs.zsh.syntaxHighlighting.enable = true;
-    programs.zsh.autosuggestions.enable = true;
-    users.defaultUserShell = pkgs.zsh;
+  };
+  programs.zsh.syntaxHighlighting.enable = true;
+  programs.zsh.autosuggestions.enable = true;
+  users.defaultUserShell = pkgs.zsh;
 
 
   programs.gnupg.agent = {
