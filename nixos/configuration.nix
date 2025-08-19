@@ -100,7 +100,12 @@
       gnumake
       vlc
       youtube-music
-     texlive.combined.scheme-full
+      (python3.withPackages (python-pkgs: with python-pkgs; [
+      pandas
+      rdkit
+      requests
+      ]))  
+      texlive.combined.scheme-full
   ];
 
   programs = {
