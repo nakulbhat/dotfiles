@@ -18,7 +18,7 @@
         "custom/separator",
         "custom/kdeconnect",
         "idle_inhibitor",
-        "network"
+        "tray",
     ],
     "backlight": {
         "format": "{icon}  {percent}% ",

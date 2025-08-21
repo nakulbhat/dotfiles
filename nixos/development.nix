@@ -19,7 +19,6 @@
                              jupyter-console
                              scikit-learn
                              numpy
-                             
                              rdkit
                              requests
       ]))  

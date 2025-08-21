@@ -11,6 +11,7 @@
     environment.systemPackages = with pkgs; [
         mako
             tofi
+            networkmanagerapplet
             waybar
             hyprpaper
             pamixer
