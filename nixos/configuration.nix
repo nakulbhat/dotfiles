@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
     ./hardware-configuration.nix
+      ./development.nix
       ./hyprland.nix
     ];
 
@@ -84,27 +85,15 @@
 # List packages installed in system profile. To search, run:
 # $ nix search wget
   environment.systemPackages = with pkgs; [
-    wl-clipboard
-      neovim 
-      curl
+    curl
       wget
-      vscodium
-      git
-      pinentry-curses
-      gnupg
-      jq
       polkit
-      nerd-fonts.jetbrains-mono
       font-awesome
+      nerd-fonts.jetbrains-mono
       bat
       gnumake
       vlc
       youtube-music
-      (python3.withPackages (python-pkgs: with python-pkgs; [
-      pandas
-      rdkit
-      requests
-      ]))  
       texlive.combined.scheme-full
       power-profiles-daemon
       zathura
