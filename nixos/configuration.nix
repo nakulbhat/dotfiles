@@ -106,6 +106,8 @@
       requests
       ]))  
       texlive.combined.scheme-full
+      power-profiles-daemon
+      zathura
   ];
 
   programs = {

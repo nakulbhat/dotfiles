@@ -7,6 +7,7 @@
         animation = "matrix";
     };
 
+    programs.nm-applet.enable = true;
     environment.systemPackages = with pkgs; [
         mako
             tofi
