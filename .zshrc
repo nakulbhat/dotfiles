@@ -14,3 +14,4 @@ compinit
 EDITOR=nvim
 
 bindkey '^ ' autosuggest-execute
+eval "$(oh-my-posh init zsh)"
