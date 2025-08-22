@@ -14,4 +14,4 @@ compinit
 EDITOR=nvim
 
 bindkey '^ ' autosuggest-execute
-eval "$(oh-my-posh init zsh)"
+eval "$(oh-my-posh --config '~/.zsh_theme.omp.json' init zsh)"
