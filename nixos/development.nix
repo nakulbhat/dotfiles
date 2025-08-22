@@ -8,6 +8,7 @@
       pinentry-curses
       gnupg
       jq
+      gcc
       gnumake
       ltex-ls-plus
       pyright
