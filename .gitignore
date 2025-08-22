@@ -1,4 +1,5 @@
-# Customr Ignores
+# Custom Ignores
+nvim_bak/
 
 ## ignoring the default tex install dir
 tex_temp/ 
