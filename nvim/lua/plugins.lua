@@ -24,9 +24,9 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
         {
-                "rebelot/kanagawa.nvim",
+                "catppuccin/nvim",
                 config = function()
-                        vim.cmd.colorscheme("kanagawa-wave")
+                        vim.cmd.colorscheme("catppuccin-mocha")
                 end
         },
 })
