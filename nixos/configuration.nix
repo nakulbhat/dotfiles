@@ -99,19 +99,6 @@
       zathura
   ];
 
-  programs = {
-    zsh = {
-      enable = true;
-      ohMyZsh = {
-        enable = true;
-        theme = "candy";
-      };
-    };
-  };
-  programs.zsh.syntaxHighlighting.enable = true;
-  programs.zsh.autosuggestions.enable = true;
-  users.defaultUserShell = pkgs.zsh;
-
 
   programs.gnupg.agent = {
     enable = true;
