@@ -9,7 +9,9 @@
       gnupg
       jq
       gnumake
-
+      ltex-ls-plus
+      pyright
+      lua-language-server
 
       (python3.withPackages (python-pkgs: with python-pkgs; [
                              pandas
