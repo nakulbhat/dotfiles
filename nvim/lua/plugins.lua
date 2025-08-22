@@ -40,6 +40,9 @@ require("nvim-treesitter.configs").setup {
                 "cpp",
                 "lua",
                 "markdown",
+                "vim",
+                "vimdoc",
+                "query",
         },
         sync_install = false,
         auto_install = true,
@@ -47,4 +50,7 @@ require("nvim-treesitter.configs").setup {
                 enable = true,
                 additional_vim_regex_highlighting = false,
         },       
+        indent = {
+                enable = true,
+        },
 }
