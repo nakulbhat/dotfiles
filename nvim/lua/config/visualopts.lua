@@ -1,6 +1,3 @@
--- Testing: Might be changed --
-vim.opt.wrap = false -- might have problems with latex
-
 
 -- Solid: Unlikely to be changed --
 vim.opt.number = true
@@ -16,14 +13,6 @@ vim.opt.tabstop = 8 -- used when saving a file
 vim.opt.shiftwidth = 8 -- used by >> and << for the indentation
 vim.opt.expandtab = true -- saving tabs as spaces
 
-vim.opt.clipboard = "unnamedplus"
-
 vim.opt.scrolloff = 999 -- keeps the cursor in the middle of the screen.
-
-vim.opt.virtualedit = "block" -- allows cursor to go off CR in visual BLOCK mode.
-
-vim.opt.inccommand = "split" -- shows a preview of all changes in a separate bottom split.
-
-vim.opt.ignorecase = true -- allow ignorecase in command line
 
 vim.opt.termguicolors = true
