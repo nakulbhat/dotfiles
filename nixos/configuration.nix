@@ -96,6 +96,7 @@
                 youtube-music
                 texlive.combined.scheme-full
                 power-profiles-daemon
+                yazi
                 zathura
         ];
 
