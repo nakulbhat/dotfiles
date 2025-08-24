@@ -2,7 +2,10 @@
 {
         environment.systemPackages = with pkgs; [
                 wl-clipboard
+                ripgrep
                 neovim
+                black
+                isort
                 git
                 tmux
                 vscodium
@@ -13,7 +16,8 @@
                 gdb
                 gnumake
                 nodejs_24
-                ltex-ls-plus
+                stylua
+                ltex-ls
                 clang-tools
                 tree-sitter
                 pyright
