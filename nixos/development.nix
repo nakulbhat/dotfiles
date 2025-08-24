@@ -12,8 +12,10 @@
                 gcc
                 gdb
                 gnumake
+                nodejs_24
                 ltex-ls-plus
                 clang-tools
+                tree-sitter
                 pyright
                 lua-language-server
                 oh-my-posh
