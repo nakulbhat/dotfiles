@@ -1,13 +1,13 @@
 return {
         'saghen/blink.cmp',
-        dependencies = { 
+        dependencies = {
                 'rafamadriz/friendly-snippets',
         },
 
         -- use a release tag to download pre-built binaries
         version = '1.*',
         opts = {
-                keymap = { preset = 'default' },
+                keymap = { preset = 'super-tab' },
 
                 appearance = {
                         nerd_font_variant = 'mono'
@@ -23,4 +23,3 @@ return {
         },
         opts_extend = { "sources.default" }
 }
-
