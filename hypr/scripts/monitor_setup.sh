@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
 # Get the list of all monitors (in JSON format) and count them
 MONITOR_COUNT=$(hyprctl monitors -j | jq 'length')
