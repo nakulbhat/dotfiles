@@ -15,3 +15,9 @@ EDITOR=nvim
 
 bindkey '^ ' autosuggest-execute
 eval "$(oh-my-posh --config '~/.zsh_theme.omp.json' init zsh)"
+
+alias g='git'
+alias ga='git add'
+alias gc='git commit'
+alias gp='git push'
+alias n='nvim'
