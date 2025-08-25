@@ -7,7 +7,7 @@ return {
         -- use a release tag to download pre-built binaries
         version = "1.*",
         opts = {
-                keymap = { preset = "default", ["<C-s>"] = { "accept", "fallback" } },
+                keymap = { preset = "default", ["<C-k>"] = { "accept", "fallback" } },
 
                 appearance = {
                         nerd_font_variant = "mono",
