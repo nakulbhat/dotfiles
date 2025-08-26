@@ -3,6 +3,7 @@
         environment.systemPackages = with pkgs; [
                 wl-clipboard
                 ripgrep
+                fzf
                 neovim
                 black
                 isort
