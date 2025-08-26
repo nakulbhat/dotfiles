@@ -1,7 +1,7 @@
 #!/usr/bin/env zsh
 
 # Find directories and let the user select one with tofi
-selected_dir=$(find ~/gitclones/ -mindepth 1 -maxdepth 1 -type d | tofi)
+selected_dir=$(find ~/gitclones/ -mindepth 1 -maxdepth 1 -type d | tofi --prompt="nvim open: ")
 
 # Check if a directory was selected
 if [ -z "$selected_dir" ]; then
