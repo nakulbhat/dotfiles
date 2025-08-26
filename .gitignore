@@ -1,5 +1,6 @@
 # Custom Ignores
 nvim_bak/
+hypr/walls
 
 ## ignoring the default tex install dir
 tex_temp/ 

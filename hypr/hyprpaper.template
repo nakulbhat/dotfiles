@@ -1,0 +1,10 @@
+$wp = <wp>
+preload = $wp
+wallpaper = , $wp
+
+#enable splash text rendering over the wallpaper
+splash = false
+
+#fully disable ipc
+# ipc = off
+
