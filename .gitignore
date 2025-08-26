@@ -1,6 +1,7 @@
 # Custom Ignores
 nvim_bak/
 hypr/walls
+hypr/hyprpaper.conf
 
 ## ignoring the default tex install dir
 tex_temp/ 
