@@ -16,3 +16,6 @@ vim.opt.expandtab = true -- saving tabs as spaces
 vim.opt.scrolloff = 999 -- keeps the cursor in the middle of the screen.
 
 vim.opt.termguicolors = true
+
+vim.opt.cmdheight = 0
+
