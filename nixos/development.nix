@@ -3,6 +3,7 @@
         environment.systemPackages = with pkgs; [
                 wl-clipboard
                 ripgrep
+                zoxide
                 fzf
                 neovim
                 black
