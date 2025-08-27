@@ -19,6 +19,7 @@
                 nodejs_24
                 stylua
                 ltex-ls
+                lazygit
                 clang-tools
                 tree-sitter
                 pyright
