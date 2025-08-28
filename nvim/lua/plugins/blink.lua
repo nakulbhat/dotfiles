@@ -2,6 +2,8 @@ return {
         "saghen/blink.cmp",
         dependencies = {
                 "rafamadriz/friendly-snippets",
+                "L3MON4D3/LuaSnip",
+                "neovim/nvim-lspconfig",
         },
 
         -- use a release tag to download pre-built binaries
@@ -14,11 +16,9 @@ return {
                 },
                 completion = { documentation = { auto_show = true } },
                 signature = { enabled = true },
+                snippets = { preset = "luasnip", },
                 sources = {
                         default = { "lsp", "path", "snippets", "buffer" },
-                },
-                snippets = {
-                        preset = "luasnip",
                 },
                 fuzzy = { implementation = "prefer_rust_with_warning" },
         },
