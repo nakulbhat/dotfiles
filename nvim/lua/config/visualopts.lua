@@ -18,4 +18,4 @@ vim.opt.scrolloff = 999 -- keeps the cursor in the middle of the screen.
 vim.opt.termguicolors = true
 
 vim.opt.cmdheight = 0
-
+vim.diagnostic.config({ virtual_text = true })
