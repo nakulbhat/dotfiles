@@ -1,6 +1,6 @@
 require("mini.ai").setup {}
 require("mini.pairs").setup {}
-require("mini.splitjoin").setup {mappings = { toggle = "gg" }}
+require("mini.splitjoin").setup {mappings = {toggle = "<leader> "}}
 
 require("mini.keymap").setup {}
 local map_combo = require("mini.keymap").map_combo
