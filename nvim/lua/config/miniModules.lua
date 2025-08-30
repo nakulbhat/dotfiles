@@ -16,3 +16,7 @@ map_combo(mode, "kj", "<BS><BS><Esc>")
 -- Escape into Normal mode from Terminal mode
 map_combo("t", "jk", "<BS><BS><C-\\><C-n>")
 map_combo("t", "kj", "<BS><BS><C-\\><C-n>")
+
+require('mini.files').setup {}
+MiniFiles = require('mini.files')
+vim.keymap.set('n', '<leader>-', MiniFiles.open)
