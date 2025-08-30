@@ -7,7 +7,7 @@ return {
         config = function()
                 require("fzf-lua").setup { "fzf-native" }
                 vim.keymap.set("n", "<leader>ff", ":FzfLua files<CR>")
-                vim.keymap.set("n", "<leader>fg", ":FzfLua grep_curbuf<CR>")
+                vim.keymap.set("n", "<leader>fg", ":FzfLua lgrep_curbuf<CR>")
         end,
         opts = {},
 }
