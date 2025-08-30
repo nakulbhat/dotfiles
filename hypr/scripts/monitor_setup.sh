@@ -17,7 +17,7 @@ if [ "$MONITOR_COUNT" -eq 2 ]; then
     hyprctl keyword monitor "HDMI-A-1, 1366x768@60, 0x0, 1"
     sleep 1
     # 4. Turn on the internal monitor with resolution 1920x1080
-    hyprctl keyword monitor "eDP-1, 1920x1080@60, 1366x0, 1"
+    hyprctl keyword monitor "eDP-1, 1920x1080@60, 1366x0, 1.25"
 
 else
     notify-send "Either more or less than two monitors are attached. Exiting script." -t 2500
