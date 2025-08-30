@@ -103,7 +103,12 @@
 
         programs.gnupg.agent = {
                 enable = true;
-                pinentryPackage = pkgs.pinentry-curses;
+                # pinentryPackage = pkgs.pinentry-curses;
+                # settings = {
+                #         default-cache-ttl = 28800;
+                #         max-cache-ttl = 28800;
+                #         allow-loopback-pinentry = true;
+                # };
         };
 
         nix.settings.experimental-features = [ "nix-command" "flakes" ];
