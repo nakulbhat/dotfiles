@@ -18,11 +18,8 @@ map_combo("t", "jk", "<BS><BS><C-\\><C-n>")
 map_combo("t", "kj", "<BS><BS><C-\\><C-n>")
 
 
-require('mini.notify').setup {}
 
 require('mini.git').setup {}
 require('mini.diff').setup {}
 require('mini.statusline').setup {}
-require('mini.tabline').setup {}
 
-vim.opt.showtabline = 2
