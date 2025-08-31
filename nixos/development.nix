@@ -5,6 +5,7 @@
                 ripgrep
                 zoxide
                 fzf
+                fd
                 neovim
                 black
                 isort
@@ -30,6 +31,7 @@
                         pandas
                         jupyter
                         notebook
+                        virtualenv
                         nbclassic
                         jupyter-console
                         scikit-learn
