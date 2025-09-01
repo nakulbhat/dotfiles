@@ -10,6 +10,7 @@
   "lazy.nvim": { "branch": "main", "commit": "6c3bda4aca61a13a9c63f1c1d1b16b9d3be90d7a" },
   "lazygit.nvim": { "branch": "main", "commit": "3c524ebec6072568064235c407195e9f9fd0cb8a" },
   "leap.nvim": { "branch": "main", "commit": "8b03b5d62d11cd9da5ea8be62ab8e9ff3fabab8f" },
+  "luasnip-latex-snippets.nvim": { "branch": "main", "commit": "53d96674d56f8489288e8db9b24c381d422e16a5" },
   "mini.nvim": { "branch": "main", "commit": "b5bae7dd5802b47bb03babfb374fdfdab02b9d8b" },
   "minintro.nvim": { "branch": "master", "commit": "a4cc6e9e3f0368fa35e3fa95b4aed840ab978a51" },
   "move.nvim": { "branch": "main", "commit": "599b14047b82e92874b9a408e4df228b965c3a1d" },
