@@ -2,6 +2,7 @@
 {
         environment.systemPackages = with pkgs; [
                 wl-clipboard
+                rip2
                 ripgrep
                 zoxide
                 fzf
