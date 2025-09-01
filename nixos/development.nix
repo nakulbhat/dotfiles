@@ -3,6 +3,7 @@
         environment.systemPackages = with pkgs; [
                 wl-clipboard
                 rip2
+                hadoop
                 ripgrep
                 zoxide
                 fzf
@@ -11,6 +12,8 @@
                 black
                 isort
                 git
+                jdk11
+                spark
                 tmux
                 vscodium
                 pinentry-curses
@@ -34,6 +37,7 @@
                         notebook
                         matplotlib
                         opencv-python
+                        pyspark
                         virtualenv
                         nbclassic
                         jupyter-console
