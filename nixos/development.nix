@@ -31,6 +31,8 @@
                         pandas
                         jupyter
                         notebook
+                        matplotlib
+                        opencv-python
                         virtualenv
                         nbclassic
                         jupyter-console
