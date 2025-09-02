@@ -1,4 +1,5 @@
 # Custom Ignores
+nvim/lazy-lock.json
 nvim_bak/
 hypr/walls
 hypr/hyprpaper.conf
