@@ -10,7 +10,6 @@
   "lazy.nvim": { "branch": "main", "commit": "6c3bda4aca61a13a9c63f1c1d1b16b9d3be90d7a" },
   "lazygit.nvim": { "branch": "main", "commit": "3c524ebec6072568064235c407195e9f9fd0cb8a" },
   "leap.nvim": { "branch": "main", "commit": "8b03b5d62d11cd9da5ea8be62ab8e9ff3fabab8f" },
-  "luasnip-latex-snippets.nvim": { "branch": "main", "commit": "53d96674d56f8489288e8db9b24c381d422e16a5" },
   "mini.nvim": { "branch": "main", "commit": "b5bae7dd5802b47bb03babfb374fdfdab02b9d8b" },
   "minintro.nvim": { "branch": "master", "commit": "a4cc6e9e3f0368fa35e3fa95b4aed840ab978a51" },
   "move.nvim": { "branch": "main", "commit": "599b14047b82e92874b9a408e4df228b965c3a1d" },
@@ -27,7 +26,7 @@
   "smear-cursor.nvim": { "branch": "main", "commit": "4b86df8a0c5f46e708616b21a02493bb0e47ecbd" },
   "telescope.nvim": { "branch": "0.1.x", "commit": "a0bbec21143c7bc5f8bb02e0005fa0b982edc026" },
   "terminal.nvim": { "branch": "master", "commit": "95cdb0c22cd2d2f8c2b33a55ec07f0bcbd6cad9e" },
+  "trouble.nvim": { "branch": "main", "commit": "85bedb7eb7fa331a2ccbecb9202d8abba64d37b3" },
   "venv-selector.nvim": { "branch": "main", "commit": "1374b2fa5d73bc050650979f40ec8dd2ec6d3305" },
-  "vimtex": { "branch": "master", "commit": "dc90feacb86f7b85b0b791d8073eefc769a23725" },
   "yazi.nvim": { "branch": "main", "commit": "66a659291f85517994886bb641567ce7c7d5368b" }
 }
