@@ -2,7 +2,17 @@ return {
         "neovim/nvim-lspconfig",
         config = function()
                 local lspconfig = require "lspconfig"
-                lspconfig.pyright.setup {}
+                lspconfig.pyright.setup {
+                        on_attach = on_attach,
+                        flags = lsp_flags,
+                        settings = {
+                                python = {
+                                        analysis = {
+                                                typeCheckingMode = "off",
+                                        },
+                                },
+                        },
+                }
                 lspconfig.lua_ls.setup {}
                 lspconfig.ltex.setup {}
                 lspconfig.clangd.setup {}

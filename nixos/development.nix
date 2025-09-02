@@ -5,6 +5,7 @@
                 rip2
                 hadoop
                 ripgrep
+                basedpyright
                 zoxide
                 fzf
                 fd
