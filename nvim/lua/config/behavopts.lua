@@ -23,7 +23,6 @@ vim.api.nvim_set_keymap("n", "<leader>x", ":wqall<CR>", { noremap = true, silent
 vim.api.nvim_set_keymap("n", "<leader>q", ":quit!<CR>", { noremap = true, silent = true })
 
 vim.api.nvim_set_keymap("n", "<leader>bc", ":BufferClose<CR>", { noremap = true, silent = true })
--- vim.api.nvim_set_keymap("n", "<leader>bn", ":BufferClose<CR>", { noremap = true, silent = true })
 
 vim.keymap.set("n", "<CR>", "mao<esc>0<S-d>`a<cmd>delmarks a<cr>", { desc = "Add new line below" })
 vim.keymap.set("n", "<S-CR>", "maO<esc>0<S-d>`a<cmd>delmarks a<cr>", { desc = "Add new line above" })
@@ -54,34 +53,7 @@ map("n", "<A-0>", "<Cmd>BufferLast<CR>", opts)
 -- Pin/unpin buffer
 map("n", "<A-p>", "<Cmd>BufferPin<CR>", opts)
 
--- Goto pinned/unpinned buffer
---                 :BufferGotoPinned
---                 :BufferGotoUnpinned
-
--- Close buffer
-map("n", "<A-c>", "<Cmd>BufferClose<CR>", opts)
-
--- Wipeout buffer
---                 :BufferWipeout
-
--- Close commands
---                 :BufferCloseAllButCurrent
---                 :BufferCloseAllButPinned
---                 :BufferCloseAllButCurrentOrPinned
---                 :BufferCloseBuffersLeft
---                 :BufferCloseBuffersRight
-
 -- Magic buffer-picking mode
-map("n", "<C-p>", "<Cmd>BufferPick<CR>", opts)
-map("n", "<C-s-p>", "<Cmd>BufferPickDelete<CR>", opts)
+map("n", "<Space>bb", "<Cmd>BufferPick<CR>", opts)
+map("n", "<Space>bd", "<Cmd>BufferPickDelete<CR>", opts)
 
--- Sort automatically by...
-map("n", "<Space>bb", "<Cmd>BufferOrderByBufferNumber<CR>", opts)
-map("n", "<Space>bn", "<Cmd>BufferOrderByName<CR>", opts)
-map("n", "<Space>bd", "<Cmd>BufferOrderByDirectory<CR>", opts)
-map("n", "<Space>bl", "<Cmd>BufferOrderByLanguage<CR>", opts)
-map("n", "<Space>bw", "<Cmd>BufferOrderByWindowNumber<CR>", opts)
-
--- Other:
--- :BarbarEnable - enables barbar (enabled by default)
--- :BarbarDisable - very bad command, should never be used
