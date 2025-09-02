@@ -57,3 +57,4 @@ map("n", "<A-p>", "<Cmd>BufferPin<CR>", opts)
 map("n", "<Space>bb", "<Cmd>BufferPick<CR>", opts)
 map("n", "<Space>bd", "<Cmd>BufferPickDelete<CR>", opts)
 
+vim.opt.mouse = ""
