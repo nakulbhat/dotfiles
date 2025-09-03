@@ -30,7 +30,6 @@ local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 
 
-vim.opt.mouse = ""
 vim.keymap.set('n', '<C-h>', '<C-w>h', { noremap = true })
 vim.keymap.set('n', '<C-j>', '<C-w>j', { noremap = true })
 vim.keymap.set('n', '<C-k>', '<C-w>k', { noremap = true })
