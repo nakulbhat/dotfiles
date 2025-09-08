@@ -14,7 +14,6 @@ return {
                         },
                 }
                 lspconfig.lua_ls.setup {}
-                lspconfig.ltex.setup {}
                 lspconfig.clangd.setup {}
                 vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
                 vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
