@@ -2,6 +2,7 @@
 {
         environment.systemPackages = with pkgs; [
                 wl-clipboard
+                hugo
                 rip2
                 hadoop
                 ripgrep
