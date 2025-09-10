@@ -18,10 +18,19 @@ end
 
 vim.keymap.set("n", "<leader>cf", FormatAndIndent, { desc = "Format with LSP/null-ls and auto-indent" })
 
-vim.api.nvim_set_keymap("n", "<leader>ww", ":w<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<leader>wq", ":wq<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<leader>qa", ":q!<CR>", { noremap = true, silent = true })
+local opts = { noremap = true, silent = true, nowait = true }
 
+-- Save the current file using Alt + w
+vim.keymap.set('n', '<A-w>', ':w<CR>', opts)
+
+-- Quit Neovim without saving all buffers using Alt + q
+vim.keymap.set('n', '<A-q>', ':qa!<CR>', opts)
+
+-- Close current buffer without saving using Alt + c
+vim.keymap.set('n', '<A-c>', ':bd!<CR>', opts)
+
+-- Save and quit all open buffers using Alt + x
+vim.keymap.set('n', '<A-x>', ':wqall<CR>', opts)
 
 vim.keymap.set("n", "<CR>", "mao<esc>0<S-d>`a<cmd>delmarks a<cr>", { desc = "Add new line below" })
 vim.keymap.set("n", "<S-CR>", "maO<esc>0<S-d>`a<cmd>delmarks a<cr>", { desc = "Add new line above" })
