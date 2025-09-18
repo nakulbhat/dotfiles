@@ -1,5 +1,6 @@
 { config, pkgs, ... }:
 {
+        programs.kdeconnect.enable = true;
         # Display Manager Config
         services.displayManager.ly.enable = true;
         services.displayManager.ly.settings = {
