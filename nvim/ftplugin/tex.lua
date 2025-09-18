@@ -1,5 +1,6 @@
 -- This file is automatically sourced when a .tex file is opened.
 
+                vim.g.maplocalleader = " " -- need to set localleader before loading lazy
 -- Disable mini.splitjoin by overriding its mappings to a no-op.
 require("mini.splitjoin").setup {
         mappings = {
