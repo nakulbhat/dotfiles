@@ -3,6 +3,7 @@
         environment.systemPackages = with pkgs; [
                 yazi
                 zathura
+                zotero
                 texlive.combined.scheme-full
                 vlc
                 youtube-music
