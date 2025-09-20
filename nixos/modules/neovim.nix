@@ -7,7 +7,7 @@
                 black
                 isort
                 stylua
-                ltex-ls
+                ltex-ls-plus
                 clang-tools
                 tree-sitter
                 pyright
