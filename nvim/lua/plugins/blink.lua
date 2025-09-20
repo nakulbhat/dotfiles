@@ -1,7 +1,7 @@
 return {
         "saghen/blink.cmp",
+        event = "InsertEnter",
         dependencies = {
-                "rafamadriz/friendly-snippets",
                 "L3MON4D3/LuaSnip",
                 "neovim/nvim-lspconfig",
         },
@@ -9,7 +9,6 @@ return {
         -- use a release tag to download pre-built binaries
         version = "1.*",
         opts = {
-                -- keymap = { preset = "default", ["<C-k>"] = { "accept", "fallback" } },
                 keymap = { preset = "super-tab" },
 
                 appearance = { nerd_font_variant = "mono" },
@@ -20,7 +19,13 @@ return {
                 },
                 signature = { enabled = true },
                 snippets = { preset = "luasnip" },
-                sources = { default = { "lsp", "path", "snippets", "buffer" } },
+                sources = {
+                        default = { "lsp", "path", "snippets", "buffer" },
+                        providers = {
+                                snippets = { score_offset = 150 },
+                                lsp = { score_offset = 100 },
+                        },
+                },
                 fuzzy = { implementation = "prefer_rust_with_warning" },
         },
         opts_extend = { "sources.default" },
