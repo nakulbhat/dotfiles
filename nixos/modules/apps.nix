@@ -3,6 +3,7 @@
         environment.systemPackages = with pkgs; [
                 yazi
                 zathura
+                inkscape
                 zotero
                 texlive.combined.scheme-full
                 vlc
