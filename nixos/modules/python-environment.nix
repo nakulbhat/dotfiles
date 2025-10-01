@@ -3,7 +3,10 @@
         environment.systemPackages = with pkgs; [
                 (python3.withPackages (python-pkgs: with python-pkgs; [
                         pandas
+                        flask
+                        cairosvg
                         jupyter
+                        flask-limiter
                         notebook
                         matplotlib
                         opencv-python
