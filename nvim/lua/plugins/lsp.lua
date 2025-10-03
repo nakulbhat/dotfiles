@@ -14,7 +14,24 @@ return {
                         },
                 }
                 lspconfig.lua_ls.setup {}
-                lspconfig.ltex_plus.setup {}
+                -- add vim user dictionary for ltex-ls
+                local path = vim.fn.stdpath "config" .. "/spell/en.utf-8.add"
+                local words = {}
+
+                for word in io.open(path, "r"):lines() do
+                        table.insert(words, word)
+                end
+                lspconfig.ltex_plus.setup {
+                        settings = {
+                                ltex = {
+                                        language = "en-GB",
+                                        dictionary = { ["en-GB"] = words },
+                                        disabledRules = {
+                                                ["en-GB"] = { "MORFOLOGIK_RULE_EN_GB" },
+                                        },
+                                },
+                        },
+                }
                 lspconfig.emmet_ls.setup {}
                 lspconfig.clangd.setup {}
                 vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
