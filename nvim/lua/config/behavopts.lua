@@ -35,12 +35,10 @@ vim.keymap.set('n', '<A-x>', ':wqall<CR>', opts)
 vim.keymap.set("n", "<CR>", "mao<esc>0<S-d>`a<cmd>delmarks a<cr>", { desc = "Add new line below" })
 vim.keymap.set("n", "<S-CR>", "maO<esc>0<S-d>`a<cmd>delmarks a<cr>", { desc = "Add new line above" })
 
-local map = vim.api.nvim_set_keymap
-local opts = { noremap = true, silent = true }
-
-
 vim.keymap.set('n', '<C-h>', '<C-w>h', { noremap = true })
 vim.keymap.set('n', '<C-j>', '<C-w>j', { noremap = true })
 vim.keymap.set('n', '<C-k>', '<C-w>k', { noremap = true })
 vim.keymap.set('n', '<C-l>', '<C-w>l', { noremap = true })
 
+vim.opt.spell = true
+vim.opt.spelllang = 'en_gb'
