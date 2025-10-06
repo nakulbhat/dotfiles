@@ -6,5 +6,6 @@ return {
                 dim = { enabled = true },
                 lazygit = { enabled = true },
                 indent = { enabled = true },
+                zen = { enabled = true },
         },
 }
