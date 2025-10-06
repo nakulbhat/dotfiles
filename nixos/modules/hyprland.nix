@@ -6,6 +6,7 @@
         services.displayManager.ly.settings = {
                 bigclock = "true";
                 animation = "matrix";
+                blank_password = "true";
         };
 
         programs.nm-applet.enable = true;
