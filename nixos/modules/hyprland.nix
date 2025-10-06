@@ -21,6 +21,7 @@
                 kitty
                 libnotify
                 grim 
+                hyprsunset
                 slurp
         ];
 
