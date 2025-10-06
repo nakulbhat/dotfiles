@@ -4,5 +4,6 @@ return {
   lazy = false,
   opts = {
                 dim = {enabled = true },
+                lazygit = {enabled = true },
         },
 }
