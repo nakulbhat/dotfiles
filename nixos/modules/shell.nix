@@ -6,6 +6,7 @@
                 rip2
                 ripgrep
                 zoxide
+                pandoc
                 curl
                 power-profiles-daemon
                 yazi
