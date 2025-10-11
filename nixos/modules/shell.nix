@@ -8,6 +8,7 @@
                 zoxide
                 pandoc
                 curl
+                entr
                 power-profiles-daemon
                 yazi
                 zathura
