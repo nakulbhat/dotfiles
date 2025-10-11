@@ -1,7 +1,7 @@
 {
     "layer": "top",
     "position": "top",
-    "height": 24,
+    "height": 26,
     "spacing": 5,
     "modules-left": [
         "hyprland/workspaces"
@@ -16,9 +16,7 @@
         "custom/separator",
         "battery",
         "custom/separator",
-        "custom/kdeconnect",
-        "idle_inhibitor",
-        "tray",
+        "network",
     ],
     "backlight": {
         "format": "{icon}  {percent}% ",
@@ -55,41 +53,12 @@
             "\uf240"
         ]
     },
-    "network": {
-        "format": "",
-        "format-ethernet": "\udb83\udc9d",
-        "format-wifi": "{icon}",
-        "format-disconnected": "\udb83\udc9c",
-        "format-icons": [
-            "\udb82\udd2f",
-            "\udb82\udd1f",
-            "\udb82\udd22",
-            "\udb82\udd25",
-            "\udb82\udd28"
-        ],
-        "tooltip-format-wifi": "{essid} ({signalStrength}%)",
-        "tooltip-format-ethernet": "{ifname}",
-        "tooltip-format-disconnected": "Disconnected",
-        "on-click": "hyprctl keyword exec kitty nmtui"
-    },
-    "idle_inhibitor": {
-        "format": "{icon}",
-        "format-icons": {
-            "activated": "\udb80\udd76",
-            "deactivated": "\udb83\udfaa"
-        }
-    },
-    "custom/kdeconnect": {
-        "exec": "~/.config/waybar/script.sh",
-        "return-type": "json",
-        "format": "{text}",
-        "interval": 5,
-        "tooltip": true,
-        "on-click": "hyprctl keyword exec kdeconnect-app"
-    },
     "custom/separator": {
         "format": "|",
         "interval": "once",
         "tooltip": false
+    },
+    "network": {
+    "format": "{essid}",
     }
 }
