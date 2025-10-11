@@ -1,6 +1,7 @@
 { config, pkgs, ... }:
 {
         environment.systemPackages = with pkgs; [
+                iwgtk
                 yazi
                 zathura
                 inkscape
