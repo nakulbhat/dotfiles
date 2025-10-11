@@ -17,7 +17,7 @@
         boot.loader.efi.canTouchEfiVariables = true;
 
         networking.hostName = "nixos"; 
-        networking.networkmanager.enable = true;
+        networking.wireless.iwd.enable = true;
 
         time.timeZone = "Asia/Kolkata";
 
