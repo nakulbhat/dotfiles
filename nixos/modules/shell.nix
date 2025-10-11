@@ -3,6 +3,8 @@
         environment.systemPackages = with pkgs; [
                 wl-clipboard
                 oh-my-posh
+                unzip
+                zip
                 rip2
                 ripgrep
                 zoxide
