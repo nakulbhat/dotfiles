@@ -1,31 +1,37 @@
 #!/usr/bin/env zsh
+set -euo pipefail
 
-# Use a glob to find PDFs in both directories and pipe to a loop
-# The 'D' flag includes dotfiles, 'N' means no match is an empty list
-# The '(.)' part ensures we are only globbing regular files
+GIT_DIR="gitclones"
+DOWN_DIR="$HOME/Downloads"
+
+# Find PDFs (include hidden, ignore .gitignore, but skip .git folders)
 search_results=$(
-    for f in gitclones/**/*.pdf(DN.) ~/Downloads/**/*.pdf(DN.); do
-        # If the file is in gitclones, strip the prefix
-        if [[ "$f" == gitclones/* ]]; then
-            echo "${f#gitclones/}"
-        else
-            # Otherwise, just print the path (you can customize this)
-            echo "$f"
-        fi
-    done
+  fd -t f -e pdf -I --hidden --exclude '.git' . "$GIT_DIR" "$DOWN_DIR" |
+  awk -v G="$GIT_DIR/" -v D="$DOWN_DIR/" '
+    index($0, G) == 1 { print "GIT/" substr($0, length(G)+1) ; next }
+    index($0, D) == 1 { print "Downloads/" substr($0, length(D)+1) ; next }
+    { print }
+  '
 )
 
-selected_pdf=$(echo "$search_results" | tofi --prompt="zathura open: ")
+selected_pdf=$(printf '%s\n' "$search_results" | tofi --prompt="zathura open: ")
 
-# Check if a PDF file was selected
-if [ -z "$selected_pdf" ]; then
-    notify-send -t 2000 "Tofi" "No PDF selected or tofi was aborted."
-    exit 1
+# If no file chosen
+if [[ -z "$selected_pdf" ]]; then
+  notify-send -t 2000 "Tofi" "No PDF selected or tofi was aborted."
+  exit 1
 fi
 
-# Re-add the gitclones prefix if needed, or leave the path as-is
-if [[ ! -f "$selected_pdf" ]]; then
-    zathura "gitclones/$selected_pdf"
+# Map display name back to full path
+case "$selected_pdf" in
+  GIT/*) full_path="${GIT_DIR}/${selected_pdf#GIT/}" ;;
+  Downloads/*) full_path="${DOWN_DIR}/${selected_pdf#Downloads/}" ;;
+  *) full_path="$selected_pdf" ;;
+esac
+
+if [[ -f "$full_path" ]]; then
+  zathura "$full_path"
 else
-    zathura "$selected_pdf"
+  notify-send -t 2000 "Zathura" "File not found: $selected_pdf"
+  exit 1
 fi
