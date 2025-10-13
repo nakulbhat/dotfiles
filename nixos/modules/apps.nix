@@ -4,6 +4,7 @@
                 iwgtk
                 yazi
                 zathura
+                xfce.thunar
                 inkscape
                 zotero
                 texlive.combined.scheme-full
