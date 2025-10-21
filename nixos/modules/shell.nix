@@ -5,6 +5,7 @@
                 oh-my-posh
                 unzip
                 zip
+                poppler-utils
                 rip2
                 ripgrep
                 zoxide
