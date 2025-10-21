@@ -43,27 +43,5 @@ vim.keymap.set('n', '<C-l>', '<C-w>l', { noremap = true })
 vim.opt.spell = true
 vim.opt.spelllang = 'en_gb'
 
-vim.keymap.set("n", "<C-f>", "]s1z=<C-o>", {
-  noremap = true,
-  silent = true,
-  desc = "Fix next spelling error (best suggestion)"
-})
-
-vim.keymap.set("i", "<C-f>", "<C-g>u<Esc>]s1z=`]a<C-g>u", {
-  noremap = true,
-  silent = true,
-  desc = "Fix next spelling error (best suggestion)"
-})
-
-
-vim.keymap.set("n", "<C-r>", function()
-  vim.cmd.normal({ "]s", bang = true })
-  require("fzf-lua").spell_suggest()
-end, { desc = "Next spelling error and open FzfLua suggestions" })
-
-vim.keymap.set("i", "<C-r>", function()
-  vim.cmd.normal({ "]s", bang = true })
-  require("fzf-lua").spell_suggest()
-  vim.cmd("startinsert")
-end, { desc = "Next spelling error and open FzfLua (insert mode)" })
-
+vim.keymap.set('i', '<C-f>', [[<C-g>u<Esc>[s1z=`]a<C-g>u]], { noremap = true, desc = "Fix previous spelling-like change in insert mode" })
+vim.keymap.set('n', '<C-f>', "[s1z=<C-o>", { noremap = true, desc = "Run the [s1z= command then jump back" })
