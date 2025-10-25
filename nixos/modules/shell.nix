@@ -3,6 +3,7 @@
         environment.systemPackages = with pkgs; [
                 wl-clipboard
                 oh-my-posh
+                gcalcli
                 unzip
                 zip
                 poppler-utils
