@@ -5,7 +5,7 @@
                 rclone
                 yazi
                 zathura
-                xfce.thunar
+                krusader
                 inkscape
                 zotero
                 texlive.combined.scheme-full
