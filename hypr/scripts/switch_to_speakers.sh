@@ -16,3 +16,5 @@ done
 pactl set-sink-mute "$SINK" 0
 pactl set-sink-volume "$SINK" 100%
 
+# Set as default sink so Waybar tracks it
+pactl set-default-sink "$SINK"
