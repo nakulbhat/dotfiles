@@ -3,6 +3,8 @@
     environment.systemPackages = with pkgs; [
         iwgtk
         rclone
+        pavucontrol
+        alsa-utils
         yazi
         zathura
         krusader
