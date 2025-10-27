@@ -21,7 +21,7 @@
                 kitty
                 libnotify
                 grim 
-                hyprsunset
+                wl-gammarelay-rs
                 slurp
         ];
 
