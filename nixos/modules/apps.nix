@@ -6,6 +6,7 @@
         pavucontrol
         alsa-utils
         yazi
+        pympress
         zathura
         krusader
         inkscape
