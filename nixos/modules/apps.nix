@@ -11,6 +11,7 @@
         krusader
         inkscape
         zotero
+        typst
         texlive.combined.scheme-full
         vlc
         youtube-music
