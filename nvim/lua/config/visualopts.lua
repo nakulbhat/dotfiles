@@ -1,4 +1,3 @@
-
 -- Solid: Unlikely to be changed --
 vim.opt.number = true
 vim.opt.relativenumber = true
@@ -12,8 +11,6 @@ vim.opt.splitright = true -- Vsplits open to the right
 vim.opt.tabstop = 4 -- used when saving a file
 vim.opt.shiftwidth = 4 -- used by >> and << for the indentation
 vim.opt.expandtab = true -- saving tabs as spaces
-
-vim.opt.scrolloff = 999 -- keeps the cursor in the middle of the screen.
 
 vim.opt.termguicolors = true
 

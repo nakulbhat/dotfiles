@@ -1,9 +1,9 @@
-require("config.visualopts")
-require("config.behavopts")
-require("config.lazy")
-require("config.miniModules")
-require('config.ironConfig')
-require('config.snacksOpts')
+local vim = vim
+local Plug = vim.fn["plug#"]
 
--- Testing: Might be changed --
-vim.opt.wrap = false -- might have problems with latex
+vim.call("plug#begin")
+Plug("nvim-tree/nvim-web-devicons")
+Plug("ibhagwan/fzf-lua")
+Plug("numToStr/Comment.nvim")
+
+vim.call("plug#end")
