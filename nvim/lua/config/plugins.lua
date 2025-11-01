@@ -15,15 +15,14 @@ end
 bootstrap_pckr()
 
 require("pckr").add{
-  "nvim-tree/nvim-web-devicons",
-  "ibhagwan/fzf-lua",
-  "numToStr/Comment.nvim",
-  "fedepujol/move.nvim",
-  "Aasim-A/scrollEOF.nvim",
-  "sphamba/smear-cursor.nvim",
-  "kylechui/nvim-surround",
-  "ggandor/leap.nvim",
+  "nvim-tree/nvim-web-devicons", -- icons in fzf-lua
+  "ibhagwan/fzf-lua", -- for lgrep, finding files
+  "numToStr/Comment.nvim", -- commenting using gc
+  "fedepujol/move.nvim", -- moving lines with A-j/k
+  "Aasim-A/scrollEOF.nvim", -- scroll past the end of a long file
+  "sphamba/smear-cursor.nvim", -- cursor movement animations
+  "kylechui/nvim-surround", -- ys, cs, ds, and vS
+  "ggandor/leap.nvim", -- mouse emulations through s and S
 }
 
-require("move").setup({})
 require("nvim-surround").setup({})
