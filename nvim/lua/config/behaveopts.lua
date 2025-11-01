@@ -11,10 +11,7 @@ vim.keymap.set('i', '<C-f>', [[<C-g>u<Esc>[s1z=`]a<C-g>u]], { noremap = true, de
 vim.keymap.set('n', '<C-f>', "[s1z=<C-o>", { noremap = true, desc = "Run the [s1z= command then jump back" })
 
 function FormatAndIndent()
-    vim.lsp.buf.format {
-        async = false,
-        timeout_ms = 1000,
-    }
+    vim.lsp.buf.format { async = false, timeout_ms = 1000, }
     vim.cmd.normal "gg=G"
 end
 vim.keymap.set("n", "<leader>cf", FormatAndIndent, { desc = "Format with LSP/null-ls and auto-indent" })
@@ -39,6 +36,7 @@ vim.keymap.set('n', '<C-k>', '<C-w>k', general_opts)
 vim.keymap.set('n', '<C-l>', '<C-w>l', general_opts)
 
 
+-- Moving lines
 require("move").setup({})
 vim.keymap.set({'n','v'}, '<A-j>', ':MoveLine(1)<CR>', general_opts)
 vim.keymap.set({'n','v'}, '<A-k>', ':MoveLine(-1)<CR>', general_opts)
@@ -47,6 +45,7 @@ vim.keymap.set({'n','v'}, '<A-l>', ':MoveHChar(1)<CR>', general_opts)
 vim.keymap.set('n', '<leader>wf', ':MoveWord(1)<CR>', general_opts)
 vim.keymap.set('n', '<leader>wb', ':MoveWord(-1)<CR>', general_opts)
 
+-- fzf lua setup
 require("fzf-lua").setup { "fzf-native" }
 vim.keymap.set("n", "<leader>ff", ":FzfLua files<CR>")
 vim.keymap.set("n", "<leader>fg", ":FzfLua live_grep<CR>")
@@ -54,5 +53,14 @@ vim.keymap.set("n", "<leader>fb", ":FzfLua lgrep_curbuf<CR>")
 vim.keymap.set("n", "<leader>fv", ":vnew<CR>:FzfLua files<CR>")
 vim.keymap.set("n", "<leader>fh", ":new<CR>:FzfLua files<CR>")
 
+-- leap setup
 vim.keymap.set({ 'n', 'x', 'o' }, 's', '<Plug>(leap)', { silent = true })
 vim.keymap.set('n', 'S', '<Plug>(leap-from-window)', { silent = true })
+
+-- yazi setup
+require("yazi").setup({})
+vim.keymap.set("n", "<leader>-", function() require("yazi").yazi() end)
+
+-- snacks: lazygit
+Snacks = require("snacks")
+vim.keymap.set('n', '<leader>lg', Snacks.lazygit.open)
