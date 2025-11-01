@@ -2,8 +2,6 @@ return {
     "saghen/blink.cmp",
     version = '1.*',
     dependencies = {
-        "saghen/blink.compat",
-        "micangl/cmp-vimtex",
         "L3MON4D3/LuaSnip",
         "rafamadriz/friendly-snippets",
     },
