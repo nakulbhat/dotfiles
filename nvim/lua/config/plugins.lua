@@ -38,6 +38,31 @@ require("pckr").add{
             })
         end
     },
+    {
+        "nvim-mini/mini.nvim",
+        config = function()
+            require("mini.ai").setup({})
+            require("mini.pairs").setup({})
+        end
+    },
+    {
+        "eoh-bse/minintro.nvim",
+        config = function()
+            require("minintro").setup({})
+        end
+    },
+    {
+        "Ramilito/winbar.nvim",
+        config = function()
+            require("winbar").setup({
+                dir_levels = 2,
+                filetype_exclude = {
+                    "minintro"
+                }
+            })
+        end
+    },
+
 }
 
 
