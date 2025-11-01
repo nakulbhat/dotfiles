@@ -1,6 +1,6 @@
 require("pckr").add({
     {
-        "nvim-treesitter/nvim-treesitter",
+        "nvim-treesitter/nvim-treesitter", -- parser
         config = function()
             require("nvim-treesitter.configs").setup({
                 auto_install = true,
@@ -34,9 +34,9 @@ require("pckr").add({
             })
         end
     },
-    "nvim-treesitter/nvim-treesitter-textobjects",
+    "nvim-treesitter/nvim-treesitter-textobjects", -- for the if af ac ic etc commands (see above)
     {
-        "windwp/nvim-ts-autotag",
+        "windwp/nvim-ts-autotag", -- add, remove and change tags using treesitter objects.
         config = function()
             require("nvim-ts-autotag")
         end

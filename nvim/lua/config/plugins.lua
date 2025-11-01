@@ -22,16 +22,16 @@ require("pckr").add{
     "Aasim-A/scrollEOF.nvim", -- scroll past the end of a long file
     "sphamba/smear-cursor.nvim", -- cursor movement animations
     {
-        "kylechui/nvim-surround",
+        "kylechui/nvim-surround", -- for ys, ds, cs and vS
         config = function()
             require("nvim-surround").setup({})
         end
-    }, -- ys, cs, ds, and vS
+    }, 
     "ggandor/leap.nvim", -- mouse emulations through s and S
     "nvim-lua/plenary.nvim", -- library needed by yazi
     "mikavilpas/yazi.nvim", -- yazi itself
     {
-        "folke/snacks.nvim",
+        "folke/snacks.nvim", -- snacks used: lazygit
         config = function()
             require("snacks").setup({
                 lazygit = {enabled = true },
@@ -39,20 +39,20 @@ require("pckr").add{
         end
     },
     {
-        "nvim-mini/mini.nvim",
+        "nvim-mini/mini.nvim", -- modules used: ai, pairs, splitjoin
         config = function()
             require("mini.ai").setup({})
             require("mini.pairs").setup({})
         end
     },
     {
-        "eoh-bse/minintro.nvim",
+        "eoh-bse/minintro.nvim", -- minimal intro splash screen
         config = function()
             require("minintro").setup({})
         end
     },
     {
-        "Ramilito/winbar.nvim",
+        "Ramilito/winbar.nvim", -- titlebar for windows
         config = function()
             require("winbar").setup({
                 dir_levels = 2,
@@ -62,6 +62,7 @@ require("pckr").add{
             })
         end
     },
+    "romainl/vim-cool", -- turn off hl after search is over
 
 }
 

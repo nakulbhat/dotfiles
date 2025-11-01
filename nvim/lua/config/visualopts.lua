@@ -6,7 +6,7 @@ vim.opt.tabstop = 4 -- used when saving a file
 vim.opt.shiftwidth = 4 -- used by >> and << for the indentation
 vim.opt.expandtab = true -- saving tabs as spaces
 vim.opt.termguicolors = true
-vim.opt.cmdheight = 1
+vim.opt.cmdheight=1
 
 vim.diagnostic.config({ virtual_text = true })
 vim.api.nvim_create_autocmd("TextYankPost", {
