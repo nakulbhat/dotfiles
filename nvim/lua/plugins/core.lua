@@ -1,10 +1,4 @@
--- ================================================================
--- 🔌 Core plugins and configurations
--- ================================================================
 return {
-  -- ---------------------------
-  -- Core utilities
-  -- ---------------------------
   "nvim-tree/nvim-web-devicons",
   "neovim/nvim-lspconfig",
   "ibhagwan/fzf-lua",
@@ -17,10 +11,6 @@ return {
   "mikavilpas/yazi.nvim",
   "romainl/vim-cool",
   "lervag/vimtex",
-
-  -- ---------------------------
-  -- Plugins with configurations
-  -- ---------------------------
 
   {
     "kylechui/nvim-surround",
