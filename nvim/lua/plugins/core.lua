@@ -1,23 +1,10 @@
--- Bootstrap lazy.nvim
-local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-if not (vim.uv or vim.loop).fs_stat(lazypath) then
-  local lazyrepo = "https://github.com/folke/lazy.nvim.git"
-  local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
-  if vim.v.shell_error ~= 0 then
-    vim.api.nvim_echo({
-      { "Failed to clone lazy.nvim:\n", "ErrorMsg" },
-      { out, "WarningMsg" },
-      { "\nPress any key to exit..." },
-    }, true, {})
-    vim.fn.getchar()
-    os.exit(1)
-  end
-end
-vim.opt.rtp:prepend(lazypath)
-
--- Define plugins
-require("lazy").setup({
-  -- core plugins
+-- ================================================================
+-- 🔌 Core plugins and configurations
+-- ================================================================
+return {
+  -- ---------------------------
+  -- Core utilities
+  -- ---------------------------
   "nvim-tree/nvim-web-devicons",
   "neovim/nvim-lspconfig",
   "ibhagwan/fzf-lua",
@@ -31,13 +18,17 @@ require("lazy").setup({
   "romainl/vim-cool",
   "lervag/vimtex",
 
-  -- plugins with configs
+  -- ---------------------------
+  -- Plugins with configurations
+  -- ---------------------------
+
   {
     "kylechui/nvim-surround",
     config = function()
       require("nvim-surround").setup({})
     end,
   },
+
   {
     "folke/snacks.nvim",
     config = function()
@@ -46,6 +37,7 @@ require("lazy").setup({
       })
     end,
   },
+
   {
     "nvim-mini/mini.nvim",
     config = function()
@@ -53,12 +45,14 @@ require("lazy").setup({
       require("mini.pairs").setup({})
     end,
   },
+
   {
     "eoh-bse/minintro.nvim",
     config = function()
       require("minintro").setup({})
     end,
   },
+
   {
     "Ramilito/winbar.nvim",
     config = function()
@@ -68,10 +62,4 @@ require("lazy").setup({
       })
     end,
   },
-}, {
-  defaults = {
-    lazy = false, -- 👈 ensures all plugins load eagerly
-  },
-  install = { colorscheme = { "habamax" } },
-  checker = { enabled = false }, -- disable automatic update checks
-})
+}
