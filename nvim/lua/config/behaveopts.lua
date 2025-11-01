@@ -64,3 +64,6 @@ vim.keymap.set("n", "<leader>-", function() require("yazi").yazi() end)
 -- snacks: lazygit
 Snacks = require("snacks")
 vim.keymap.set('n', '<leader>lg', Snacks.lazygit.open)
+
+-- mini splitjoin
+require("mini.splitjoin").setup {mappings = {toggle = "<leader> "}}
