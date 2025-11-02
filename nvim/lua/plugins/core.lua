@@ -1,5 +1,5 @@
 return {
-    "nvim-tree/nvim-web-devicons",
+   "nvim-tree/nvim-web-devicons",
     "neovim/nvim-lspconfig",
     "ibhagwan/fzf-lua",
     "numToStr/Comment.nvim",
@@ -11,9 +11,13 @@ return {
     "mikavilpas/yazi.nvim",
     "romainl/vim-cool",
     {
+        'nvim-lualine/lualine.nvim',
+        dependencies = { 'nvim-tree/nvim-web-devicons' }
+    },
+    {
         "loctvl842/monokai-pro.nvim",
         priority = 1000,
-        config = function ()
+        config = function()
             require("monokai-pro").setup()
         end
     },
@@ -47,16 +51,6 @@ return {
         "eoh-bse/minintro.nvim",
         config = function()
             require("minintro").setup({})
-        end,
-    },
-
-    {
-        "Ramilito/winbar.nvim",
-        config = function()
-            require("winbar").setup({
-                dir_levels = 2,
-                filetype_exclude = { "minintro" },
-            })
         end,
     },
 }
