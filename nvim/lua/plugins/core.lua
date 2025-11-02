@@ -10,6 +10,13 @@ return {
     "nvim-lua/plenary.nvim",
     "mikavilpas/yazi.nvim",
     "romainl/vim-cool",
+    {
+        "loctvl842/monokai-pro.nvim",
+        priority = 1000,
+        config = function ()
+            require("monokai-pro").setup()
+        end
+    },
     "lervag/vimtex",
     "Vigemus/iron.nvim",
     {
