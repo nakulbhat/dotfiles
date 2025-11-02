@@ -1,5 +1,5 @@
 return {
-   "nvim-tree/nvim-web-devicons",
+    "nvim-tree/nvim-web-devicons",
     "neovim/nvim-lspconfig",
     "ibhagwan/fzf-lua",
     "numToStr/Comment.nvim",
@@ -31,12 +31,18 @@ return {
     },
 
     {
-        "folke/snacks.nvim",
-        config = function()
-            require("snacks").setup({
-                lazygit = { enabled = true },
-            })
-        end,
+        "kdheepak/lazygit.nvim",
+        lazy = true,
+        cmd = {
+            "LazyGit",
+            "LazyGitConfig",
+            "LazyGitCurrentFile",
+            "LazyGitFilter",
+            "LazyGitFilterCurrentFile",
+        },
+        dependencies = {
+            "nvim-lua/plenary.nvim",
+        },
     },
 
     {
