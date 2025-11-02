@@ -7,6 +7,7 @@ vim.opt.shiftwidth = 4 -- used by >> and << for the indentation
 vim.opt.expandtab = true -- saving tabs as spaces
 vim.opt.termguicolors = true
 vim.opt.cmdheight=1
+vim.opt.scrolloff=10
 
 vim.diagnostic.config({ virtual_text = true })
 vim.api.nvim_create_autocmd("TextYankPost", {
@@ -16,3 +17,4 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 })
 
 require("smear_cursor").enabled = true
+vim.cmd('colorscheme monokai-pro')
