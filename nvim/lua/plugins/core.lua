@@ -9,6 +9,7 @@ return {
     "ggandor/leap.nvim",
     "nvim-lua/plenary.nvim",
     "mikavilpas/yazi.nvim",
+    "junegunn/goyo.vim",
     "romainl/vim-cool",
     {
         'nvim-lualine/lualine.nvim',
