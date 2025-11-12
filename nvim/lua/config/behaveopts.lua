@@ -68,3 +68,5 @@ require("mini.splitjoin").setup { mappings = { toggle = "<leader> " } }
 
 vim.g.vimtex_view_method = "zathura"
 vim.g.vimtex_compiler_method = "arara"
+
+vim.keymap.set('n', '<leader>g', "<cmd>Goyo<cr>" )
