@@ -46,7 +46,12 @@ vim.keymap.set('n', '<leader>wf', ':MoveWord(1)<CR>', general_opts)
 vim.keymap.set('n', '<leader>wb', ':MoveWord(-1)<CR>', general_opts)
 
 -- fzf lua setup
-require("fzf-lua").setup { "fzf-native" }
+require("fzf-lua").setup {
+    "fzf-native",
+    files = {
+        fd_opts = [[--color=never --hidden --type f --type l --exclude .git --exclude '*.pdf']],
+    }
+}
 vim.keymap.set("n", "<leader>ff", ":FzfLua files<CR>")
 vim.keymap.set("n", "<leader>fg", ":FzfLua live_grep<CR>")
 vim.keymap.set("n", "<leader>fb", ":FzfLua lgrep_curbuf<CR>")
