@@ -24,4 +24,4 @@ alias gl='git log --oneline'
 alias gs='git status'
 alias n='nvim'
 alias cd='z'
-export TEXINPUTS=/home/nakul/gitclones/latex/texcls//:
+export TEXINPUTS=/home/nakul/gitclones/LatexClassFiles//:
