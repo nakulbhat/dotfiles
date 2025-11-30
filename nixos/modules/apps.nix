@@ -9,7 +9,6 @@
         yazi
         pympress
         zathura
-        krusader
         inkscape
         zotero
         typst
@@ -24,12 +23,17 @@
 
     services.desktopManager.plasma6.enable = true;
 
+    programs.thunar.enable = true;
+    programs.xfconf.enable = true; # persist settings for Thunar
+    programs.thunar.plugins = with pkgs.xfce; [
+        thunar-archive-plugin
+        thunar-volman
+    ];
 
-    # Either disable PipeWire completely or just audio
     services.pipewire = {
-        enable = true;        # if you want PipeWire for video or MIDI
-        alsa.enable = false;  # disable PipeWire ALSA
-        pulse.enable = false; # disable PipeWire PulseAudio replacement
+        enable = true;        
+        alsa.enable = false;  
+        pulse.enable = false;
     };
     hardware.pulseaudio.enable = true;
     hardware.pulseaudio.support32Bit = true; 
