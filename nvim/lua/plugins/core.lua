@@ -70,4 +70,13 @@ return {
             vim.opt.foldlevelstart = 99
         end,
     },
+    {
+        "iurimateus/luasnip-latex-snippets.nvim",
+        -- vimtex isn't required if using treesitter
+        dependencies = { "L3MON4D3/LuaSnip", "lervag/vimtex" },
+        config = function()
+            require 'luasnip-latex-snippets'.setup()
+        end,
+    },
+    "rafamadriz/friendly-snippets",
 }
