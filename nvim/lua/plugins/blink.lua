@@ -16,11 +16,7 @@ return {
         signature = { enabled = true },
         snippets = { preset = "luasnip" },
         sources = {
-            default = { "lsp", "path", "snippets", "buffer" },
-            providers = {
-                snippets = { score_offset = 150 },
-                lsp = { score_offset = 100 },
-            },
+            default = { "lsp", "path", "snippets" },
         },
         fuzzy = { implementation = "prefer_rust_with_warning" },
     },
