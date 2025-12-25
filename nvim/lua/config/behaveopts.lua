@@ -75,3 +75,7 @@ vim.g.vimtex_view_method = "zathura"
 vim.g.vimtex_compiler_method = "arara"
 
 vim.keymap.set('n', '<leader>g', "<cmd>Goyo<cr>" )
+
+vim.keymap.set("n", "<leader>cb", function()
+  require("bibpicker").pick_bibkey()
+end, { desc = "Insert BibTeX citation key" })
