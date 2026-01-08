@@ -25,3 +25,19 @@ alias gs='git status'
 alias n='nvim'
 alias cd='z'
 export TEXINPUTS=/home/nakul/gitclones/LatexClassFiles//:
+
+aw() {
+  # strip .tex if given
+  base="${1%.tex}"
+
+  pdf="${base}.pdf"
+
+  if [ -f "$pdf" ]; then
+    zathura "$pdf" &
+  else
+    arara "$base" || return
+    zathura "$pdf" &
+  fi
+
+  fd | entr -c arara "$base" -v
+}
