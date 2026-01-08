@@ -3,6 +3,7 @@
     environment.systemPackages = with pkgs; [
         iwgtk
         gh
+        libreoffice
         rclone
         pavucontrol
         alsa-utils
