@@ -38,13 +38,18 @@ vim.keymap.set('n', '<C-l>', '<C-w>l', general_opts)
 
 -- Moving lines
 require("move").setup({})
-vim.keymap.set({ 'n', 'v' }, '<A-j>', ':MoveLine(1)<CR>', general_opts)
-vim.keymap.set({ 'n', 'v' }, '<A-k>', ':MoveLine(-1)<CR>', general_opts)
-vim.keymap.set({ 'n', 'v' }, '<A-h>', ':MoveHChar(-1)<CR>', general_opts)
-vim.keymap.set({ 'n', 'v' }, '<A-l>', ':MoveHChar(1)<CR>', general_opts)
+vim.keymap.set('n', '<A-j>', ':MoveLine(1)<CR>', general_opts)
+vim.keymap.set('n', '<A-k>', ':MoveLine(-1)<CR>', general_opts)
+vim.keymap.set('n', '<A-h>', ':MoveHChar(-1)<CR>', general_opts)
+vim.keymap.set('n', '<A-l>', ':MoveHChar(1)<CR>', general_opts)
 vim.keymap.set('n', '<leader>wf', ':MoveWord(1)<CR>', general_opts)
 vim.keymap.set('n', '<leader>wb', ':MoveWord(-1)<CR>', general_opts)
 
+-- Visual-mode commands
+vim.keymap.set('v', '<A-j>', ':MoveBlock(1)<CR>', general_opts)
+vim.keymap.set('v', '<A-k>', ':MoveBlock(-1)<CR>', general_opts)
+vim.keymap.set('v', '<A-h>', ':MoveHBlock(-1)<CR>', general_opts)
+vim.keymap.set('v', '<A-l>', ':MoveHBlock(1)<CR>', general_opts)
 -- fzf lua setup
 require("fzf-lua").setup {
     "fzf-native",
@@ -69,7 +74,7 @@ vim.keymap.set("n", "<leader>-", function() require("yazi").yazi() end)
 vim.keymap.set('n', '<leader>lg', "<cmd>LazyGit<cr>")
 
 -- mini splitjoin
-require("mini.splitjoin").setup { mappings = { toggle = "<leader> " } }
+require("mini.splitjoin").setup {mappings = { toggle = "<leader> " }}
 
 vim.g.vimtex_view_method = "zathura"
 vim.g.vimtex_compiler_method = "arara"
