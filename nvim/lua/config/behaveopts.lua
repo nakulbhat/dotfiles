@@ -26,8 +26,8 @@ vim.keymap.set('n', '<A-c>', ':bd!<CR>', no_wait_opts)
 vim.keymap.set('n', '<A-x>', ':wqall<CR>', no_wait_opts)
 
 -- adding empty lines above and below current line
-vim.keymap.set("n", "<CR>", "mao<esc>0<S-d>`a<cmd>delmarks a<cr>")
-vim.keymap.set("n", "<S-CR>", "maO<esc>0<S-d>`a<cmd>delmarks a<cr>")
+vim.keymap.set("n", "\\", "mao<esc>0<S-d>`a<cmd>delmarks a<cr>")
+vim.keymap.set("n", "|", "maO<esc>0<S-d>`a<cmd>delmarks a<cr>")
 
 -- moving to different visible windows
 vim.keymap.set('n', '<C-h>', '<C-w>h', general_opts)
@@ -78,8 +78,6 @@ require("mini.splitjoin").setup {mappings = { toggle = "<leader> " }}
 
 vim.g.vimtex_view_method = "zathura"
 vim.g.vimtex_compiler_method = "arara"
-
-vim.keymap.set('n', '<leader>g', "<cmd>Goyo<cr>" )
 
 vim.keymap.set("n", "<leader>cb", function()
   require("bibpicker").pick_bibkey()
