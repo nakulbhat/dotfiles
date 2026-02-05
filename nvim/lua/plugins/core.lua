@@ -9,7 +9,6 @@ return {
     "ggandor/leap.nvim",
     "nvim-lua/plenary.nvim",
     "mikavilpas/yazi.nvim",
-    "junegunn/goyo.vim",
     "romainl/vim-cool",
     {
         'nvim-lualine/lualine.nvim',
@@ -57,17 +56,6 @@ return {
         "eoh-bse/minintro.nvim",
         config = function()
             require("minintro").setup({})
-        end,
-    },
-    {
-        "chrisgrieser/nvim-origami",
-        event = "VeryLazy",
-        opts = {}, -- needed even when using default config
-
-        -- recommended: disable vim's auto-folding
-        init = function()
-            vim.opt.foldlevel = 99
-            vim.opt.foldlevelstart = 99
         end,
     },
     {
