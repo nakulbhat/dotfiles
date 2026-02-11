@@ -6,7 +6,6 @@ setopt autocd extendedglob nomatch
 # End of lines configured by zsh-newuser-install
 EDITOR=nvim
 
-bindkey '^ ' autosuggest-execute
 eval "$(oh-my-posh --config '~/.zsh_theme.omp.json' init zsh)"
 
 eval "$(zoxide init zsh)"
@@ -44,7 +43,7 @@ aw() {
 
 export LANG=en_US.UTF-8
 export LC_CTYPE=en_US.UTF-8
-export SHELL=/usr/bin/zsh 
+# export SHELL=/usr/bin/zsh 
 export LC_ALL=en_US.UTF-8
 
 # Basic auto/tab complete:
@@ -80,3 +79,8 @@ zle-line-init() {
 zle -N zle-line-init
 echo -ne '\e[5 q' # Use beam shape cursor on startup.
 preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
+
+bindkey '^ ' autosuggest-execute
+
+alias ns='nix-shell --run $SHELL -p'
+alias fe='fd | entr -c'
