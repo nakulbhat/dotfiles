@@ -6,7 +6,9 @@ return {
     "fedepujol/move.nvim",
     "Aasim-A/scrollEOF.nvim",
     "sphamba/smear-cursor.nvim",
-    "ggandor/leap.nvim",
+    {
+         url = "https://codeberg.org/andyg/leap.nvim",
+    },
     "nvim-lua/plenary.nvim",
     "mikavilpas/yazi.nvim",
     "romainl/vim-cool",
