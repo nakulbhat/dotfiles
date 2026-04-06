@@ -1,7 +1,7 @@
 vim.opt.clipboard = "unnamedplus"
 vim.opt.virtualedit = "block" -- allows cursor to go off CR in visual BLOCK mode.
 vim.opt.inccommand = "split"  -- shows a preview of all changes in a separate bottom split.
-vim.opt.ignorecase = true     -- allow ignorecase in command line
+vim.opt.ignorecase = true     -- allow ignore case in command line
 
 vim.opt.spell = true
 vim.opt.spelllang = 'en_gb'
@@ -21,7 +21,7 @@ local general_opts = { noremap = true, silent = true }
 
 --saving, quitting and closing
 vim.keymap.set('n', '<A-w>', ':w<CR>', no_wait_opts)
-vim.keymap.set('n', '<A-q>', ':qa!<CR>', no_wait_opts)
+vim.keymap.set('c', 'qq', ':qa!', no_wait_opts)
 vim.keymap.set('n', '<A-c>', ':bd!<CR>', no_wait_opts)
 vim.keymap.set('n', '<A-x>', ':wqall<CR>', no_wait_opts)
 
@@ -29,7 +29,7 @@ vim.keymap.set('n', '<A-x>', ':wqall<CR>', no_wait_opts)
 vim.keymap.set("n", "\\", "mao<esc>0<S-d>`a<cmd>delmarks a<cr>")
 vim.keymap.set("n", "|", "maO<esc>0<S-d>`a<cmd>delmarks a<cr>")
 
--- moving to different visible windows
+-- moving to visible different windows
 vim.keymap.set('n', '<C-h>', '<C-w>h', general_opts)
 vim.keymap.set('n', '<C-j>', '<C-w>j', general_opts)
 vim.keymap.set('n', '<C-k>', '<C-w>k', general_opts)
@@ -40,10 +40,8 @@ vim.keymap.set('n', '<C-l>', '<C-w>l', general_opts)
 require("move").setup({})
 vim.keymap.set('n', '<A-j>', ':MoveLine(1)<CR>', general_opts)
 vim.keymap.set('n', '<A-k>', ':MoveLine(-1)<CR>', general_opts)
-vim.keymap.set('n', '<A-h>', ':MoveHChar(-1)<CR>', general_opts)
-vim.keymap.set('n', '<A-l>', ':MoveHChar(1)<CR>', general_opts)
-vim.keymap.set('n', '<leader>wf', ':MoveWord(1)<CR>', general_opts)
-vim.keymap.set('n', '<leader>wb', ':MoveWord(-1)<CR>', general_opts)
+vim.keymap.set('n', '<A-l>', ':MoveWord(1)<CR>', general_opts)
+vim.keymap.set('n', '<A-h>', ':MoveWord(-1)<CR>', general_opts)
 
 -- Visual-mode commands
 vim.keymap.set('v', '<A-j>', ':MoveBlock(1)<CR>', general_opts)
@@ -62,6 +60,7 @@ vim.keymap.set("n", "<leader>fg", ":FzfLua live_grep<CR>")
 vim.keymap.set("n", "<leader>fb", ":FzfLua lgrep_curbuf<CR>")
 vim.keymap.set("n", "<leader>fv", ":vnew<CR>:FzfLua files<CR>")
 vim.keymap.set("n", "<leader>fh", ":new<CR>:FzfLua files<CR>")
+vim.keymap.set('n', '<A-s>', ':FzfLua spell_suggest<CR>', { noremap = true, silent = true })
 
 -- leap setup
 vim.keymap.set({ 'n', 'x', 'o' }, 's', '<Plug>(leap)', { silent = true })
@@ -82,3 +81,13 @@ vim.g.vimtex_compiler_method = "arara"
 vim.keymap.set("n", "<leader>cb", function()
   require("bibpicker").pick_bibkey()
 end, { desc = "Insert BibTeX citation key" })
+
+-- touchpad scrolling is auto mapped to arrow keys by terminal.
+-- Disabling them allows to completely turn off mouse support
+vim.keymap.set("", "<up>", "<nop>", { noremap = true })
+vim.keymap.set("", "<down>", "<nop>", { noremap = true })
+vim.keymap.set("i", "<up>", "<nop>", { noremap = true })
+vim.keymap.set("i", "<down>", "<nop>", { noremap = true })
+
+vim.opt.mouse = ""
+
