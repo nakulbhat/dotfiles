@@ -11,18 +11,6 @@ return {
     "mikavilpas/yazi.nvim",
     "romainl/vim-cool",
     {
-        'nvim-lualine/lualine.nvim',
-        dependencies = { 'nvim-tree/nvim-web-devicons' }
-    },
-    {
-        "loctvl842/monokai-pro.nvim",
-        priority = 1000,
-        config = function()
-            require("monokai-pro").setup()
-        end
-    },
-    "Vigemus/iron.nvim",
-    {
         "kylechui/nvim-surround",
         config = function()
             require("nvim-surround").setup({})
@@ -53,12 +41,6 @@ return {
     },
 
     {
-        "eoh-bse/minintro.nvim",
-        config = function()
-            require("minintro").setup({})
-        end,
-    },
-    {
         "iurimateus/luasnip-latex-snippets.nvim",
         -- vimtex isn't required if using treesitter
         dependencies = { "L3MON4D3/LuaSnip", "lervag/vimtex" },
@@ -67,4 +49,22 @@ return {
         end,
     },
     "rafamadriz/friendly-snippets",
+    -- {
+    --     "folke/which-key.nvim",
+    --     event = "VeryLazy",
+    --     opts = {
+    --         -- your configuration comes here
+    --         -- or leave it empty to use the default settings
+    --         -- refer to the configuration section below
+    --     },
+    --     keys = {
+    --         {
+    --             "<leader>?",
+    --             function()
+    --                 require("which-key").show({ global = false })
+    --             end,
+    --             desc = "Buffer Local Keymaps (which-key)",
+    --         },
+    --     },
+    -- },
 }
