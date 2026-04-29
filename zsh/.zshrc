@@ -84,3 +84,5 @@ bindkey '^ ' autosuggest-execute
 
 alias ns='nix-shell --run $SHELL -p'
 alias fe='fd | entr -c'
+export NIXPKGS_ALLOW_UNFREE=1
+export PATH="$PATH:."
