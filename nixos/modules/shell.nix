@@ -4,6 +4,7 @@
         wl-clipboard
         oh-my-posh
         gcalcli
+        exfat
         unzip
         zip
         poppler-utils

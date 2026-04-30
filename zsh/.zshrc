@@ -86,3 +86,20 @@ alias ns='nix-shell --run $SHELL -p'
 alias fe='fd | entr -c'
 export NIXPKGS_ALLOW_UNFREE=1
 export PATH="$PATH:."
+mnt() {
+  local dev="$1"
+  local label
+  label=$(lsblk -no LABEL "$dev" 2>/dev/null)
+  label="${label:-$(basename $dev)}"
+  local mountpoint="$HOME/mnt/$label"
+
+  mkdir -p "$mountpoint"
+  sudo mount.exfat-fuse "$dev" "$mountpoint" -o uid=$(id -u),gid=$(id -g)
+  echo "Mounted $dev → $mountpoint"
+}
+
+umnt() {
+  local dev="$1"
+  sudo umount -l "$dev"
+  echo "Unmounted $dev"
+}
